@@ -3,6 +3,8 @@ import mausam from "../assets/projects/mausam.jpg";
 import crypker from "../assets/projects/crypker.jpg";
 import textmanipulator from "../assets/projects/textmanipulator.jpg";
 import AIRLINE from "../assets/projects/AIRLINE.jpg";
+import robosoccer from "../assets/projects/robosoccer.jpg";
+import smartaccesssystem from "../assets/projects/smartaccesssystem.png";
 
 export const projects = {
   webData: [
@@ -61,8 +63,8 @@ export const projects = {
       id: 2,
       name: "RoboSoccer",
       des: "Arduino",
-      image: mausam,
-      github: "https://github.com/sh7vashrestha/Mausam",
+      image: robosoccer,
+      github: "https://github.com/sh7vashrestha/ROBOSOCCER",
       live: "",
     },
     {
@@ -70,7 +72,7 @@ export const projects = {
       name: "Line-Following-Bot",
       des: "Arduino",
       image: mausam,
-      github: "https://github.com/sh7vashrestha/Mausam",
+      github: "https://github.com/sh7vashrestha/LineFollowingRobot",
       live: "",
 
     },
@@ -78,15 +80,15 @@ export const projects = {
       id: 3,
       name: "Smart Door Access System",
       des: "Arduino, Flutter",
-      image: mausam,
-      github: "https://github.com/sh7vashrestha/Mausam",
+      image: smartaccesssystem,
+      github: "https://github.com/sh7vashrestha/SmartAccessSystem",
       live: "",
 
     },
   ],
   graphicData: [
     {
-      id: 2,
+      id: 1,
       name: "Cryptocurrency Tracker",
       des: "React, HTML, SASS",
       image: crypker,
