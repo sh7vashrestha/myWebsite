@@ -3,8 +3,9 @@ import mausam from "../assets/projects/mausam.jpg";
 import crypker from "../assets/projects/crypker.jpg";
 import textmanipulator from "../assets/projects/textmanipulator.jpg";
 import AIRLINE from "../assets/projects/AIRLINE.jpg";
-import robosoccer from "../assets/projects/robosoccer.jpg";
-import smartaccesssystem from "../assets/projects/smartaccesssystem.png";
+import robosoccer from "../assets/projects/robosoccer.jpg";npm start
+import smartaccesssystem from "../assets/projects/smartaccesssystem.png"; 
+import linerobo from "../assets/projects/linerobo.jpg"; 
 
 export const projects = {
   webData: [
@@ -71,7 +72,7 @@ export const projects = {
       id: 3,
       name: "Line-Following-Bot",
       des: "Arduino",
-      image: mausam,
+      image: linerobo,
       github: "https://github.com/sh7vashrestha/LineFollowingRobot",
       live: "",
 

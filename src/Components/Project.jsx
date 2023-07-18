@@ -24,7 +24,7 @@ function Project() {
     a =projects.graphicData;
   }
   return (
-    <div name="work" className="w-full h-[150vh] text-[#f3f3f3] bg-[#1e1e1e]">
+    <div name="work" className="w-full min-h-[150vh] text-[#f3f3f3] bg-[#1e1e1e]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full ">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-[#1D94D4] border-[#1D94D4]">
@@ -146,10 +146,10 @@ function Project() {
             <div
               key={index}
               style={{ backgroundImage: `url(${item.image})` }}
-              className="shadow-lg shadow-[#040c16] group container rounded-md 
+              className="shadow-lg shadow-[#040c16] group container rounded-lg
             flex justify-center text-center items-center mx-auto content-div bg-cover">
               {/* Hover effect for images */}
-              <div className="w-[100%] h-[100%] p-2 opacity-0 group-hover:opacity-100 bg-opacity-95 bg-[#1e1e1e]">
+              <div className="w-[100%] h-[100%] p-2 opacity-0 group-hover:opacity-100 bg-opacity-80 bg-[#1e1e1e]">
                 <span className="text-3xl font-bold text-[#1D94D4] tracking-wider ">
                   {item.name}
                 </span>
