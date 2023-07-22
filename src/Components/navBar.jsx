@@ -5,7 +5,6 @@ import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
-  FaInstagram,
 } from "react-icons/fa";
 
 import { BsPersonLinesFill } from "react-icons/bs";
@@ -17,7 +16,7 @@ function NavBar() {
   };
 
   return (
-    <div className="fixed w-full h-[85px] flex justify-between items-center px-4 bg-[#1E1E1E] text-[#f4f4f4]">
+    <div className="fixed w-full h-[85px] flex justify-between items-center px-4 bg-[#1E1E1E] text-[#f4f4f4] z-1">
       <div>
         <span>
           <img
@@ -30,16 +29,17 @@ function NavBar() {
       </div>
       {/* Menu */}
 
-      <ul className="hidden sm:flex">
+      <ul className="hidden md:flex">
         <li className="sm:px-4 md:px-6">Home</li>
         <li className="sm:px-4 md:px-6">About</li>
         <li className="sm:px-4 md:px-6">My Skills</li>
         <li className="sm:px-4 md:px-6">Projects</li>
+        <li className="sm:px-4 md:px-6">Blogs</li>
         <li className="sm:px-4 md:px-6">Contact</li>
       </ul>
 
       {/* Hamburger */}
-      <div onClick={handelClick} className="sm:hidden z-10">
+      <div onClick={handelClick} className="md:hidden z-10">
         {!nav ? <FaBars size={30} /> : <FaTimes size={30} />}
       </div>
 
@@ -55,11 +55,12 @@ function NavBar() {
         <li className="py-6 text-4xl">About</li>
         <li className="py-6 text-4xl">My Skills</li>
         <li className="py-6 text-4xl">Projects</li>
+        <li className="py-6 text-4xl">Blogs</li>
         <li className="py-6 text-4xl">Contact</li>
       </ul>
 
       {/* Social Icons */}
-      <div className={!nav?"hidden sm:flex fixed flex-col top-[35%] left-0": "flex fixed flex-col top-[35%] left-0"}>
+      <div className={!nav?"hidden md:flex fixed flex-col top-[35%] left-0": "flex fixed flex-col top-[35%] left-0"}>
         <ul>
           <li className="w-[150px] h-[50px] flex justify-between items- ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0072b1]">
             <a

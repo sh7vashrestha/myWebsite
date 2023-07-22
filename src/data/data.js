@@ -3,9 +3,29 @@ import mausam from "../assets/projects/mausam.jpg";
 import crypker from "../assets/projects/crypker.jpg";
 import textmanipulator from "../assets/projects/textmanipulator.jpg";
 import AIRLINE from "../assets/projects/AIRLINE.jpg";
-import robosoccer from "../assets/projects/robosoccer.jpg";npm start
-import smartaccesssystem from "../assets/projects/smartaccesssystem.png"; 
-import linerobo from "../assets/projects/linerobo.jpg"; 
+import robosoccer from "../assets/projects/robosoccer.jpg";
+import smartaccesssystem from "../assets/projects/smartaccesssystem.png";
+import linerobo from "../assets/projects/linerobo.jpg";
+import roboarm from "../assets/projects/roboarm.jpg";
+import logo1 from "../assets/projects/Graphic Designs/Badges/1.png";
+import logo2 from "../assets/projects/Graphic Designs/Badges/2.png";
+import logo3 from "../assets/projects/Graphic Designs/Badges/3.png";
+import logo4 from "../assets/projects/Graphic Designs/Badges/4.png";
+import logo5 from "../assets/projects/Graphic Designs/Badges/6.png";
+import logo6 from "../assets/projects/Graphic Designs/Badges/7.png";
+import logo7 from "../assets/projects/Graphic Designs/Badges/8.png";
+import app1 from "../assets/projects/Graphic Designs/application/1.png";
+import app2 from "../assets/projects/Graphic Designs/application/2.png";
+import app3 from "../assets/projects/Graphic Designs/application/3.png";
+import app4 from "../assets/projects/Graphic Designs/application/4.jpg";
+import festival1 from "../assets/projects/Graphic Designs/festival/Dashain.jpg";
+import festival2 from "../assets/projects/Graphic Designs/festival/MahaShivaRatri.png";
+import festival3 from "../assets/projects/Graphic Designs/festival/Newyear.jpg";
+import festival4 from "../assets/projects/Graphic Designs/festival/tihar.jpg";
+import event1 from "../assets/projects/Graphic Designs/banners/battle.png";
+import event2 from "../assets/projects/Graphic Designs/banners/battleforspeed.jpg";
+import event3 from "../assets/projects/Graphic Designs/banners/rookies.png";
+import event4 from "../assets/projects/Graphic Designs/banners/welcome.jpg";
 
 export const projects = {
   webData: [
@@ -56,7 +76,7 @@ export const projects = {
       id: 1,
       name: "Robotic Arm",
       des: "Arduino, OpenCV",
-      image: mausam,
+      image: roboarm,
       github: "https://github.com/WRCRoboticsClub/robotics-arm",
       live: "",
     },
@@ -75,7 +95,6 @@ export const projects = {
       image: linerobo,
       github: "https://github.com/sh7vashrestha/LineFollowingRobot",
       live: "",
-
     },
     {
       id: 3,
@@ -84,17 +103,32 @@ export const projects = {
       image: smartaccesssystem,
       github: "https://github.com/sh7vashrestha/SmartAccessSystem",
       live: "",
-
     },
   ],
   graphicData: [
     {
       id: 1,
-      name: "Cryptocurrency Tracker",
-      des: "React, HTML, SASS",
-      image: crypker,
-      github: "",
-      live: "",
+      name: "Event Banners",
+      des: "Simple banners for the events",
+      image: [event1, event2, event3, event4],
+    },
+    {
+      id: 2,
+      name: "Festival Banners",
+      des: "Simple banners for the festival wishes",
+      image: [festival2, festival1, festival3, festival4],
+    },
+    {
+      id: 3,
+      name: "Badges",
+      des: "Simple Badges",
+      image: [logo1, logo5, logo3,logo7, logo4, logo6, logo2],
+    },
+    {
+      id: 3,
+      name: "Application UI",
+      des: "Some of application UI in figma",
+      image: [app1, app2, app3, app4],
     },
   ],
 };
