@@ -7,25 +7,18 @@ import robosoccer from "../assets/projects/robosoccer.jpg";
 import smartaccesssystem from "../assets/projects/smartaccesssystem.png";
 import linerobo from "../assets/projects/linerobo.jpg";
 import roboarm from "../assets/projects/roboarm.jpg";
-import logo1 from "../assets/projects/Graphic Designs/Badges/1.png";
-import logo2 from "../assets/projects/Graphic Designs/Badges/2.png";
-import logo3 from "../assets/projects/Graphic Designs/Badges/3.png";
-import logo4 from "../assets/projects/Graphic Designs/Badges/4.png";
-import logo5 from "../assets/projects/Graphic Designs/Badges/6.png";
-import logo6 from "../assets/projects/Graphic Designs/Badges/7.png";
-import logo7 from "../assets/projects/Graphic Designs/Badges/8.png";
-import app1 from "../assets/projects/Graphic Designs/application/1.png";
-import app2 from "../assets/projects/Graphic Designs/application/2.png";
-import app3 from "../assets/projects/Graphic Designs/application/3.png";
-import app4 from "../assets/projects/Graphic Designs/application/4.jpg";
-import festival1 from "../assets/projects/Graphic Designs/festival/Dashain.jpg";
-import festival2 from "../assets/projects/Graphic Designs/festival/MahaShivaRatri.png";
-import festival3 from "../assets/projects/Graphic Designs/festival/Newyear.jpg";
-import festival4 from "../assets/projects/Graphic Designs/festival/tihar.jpg";
-import event1 from "../assets/projects/Graphic Designs/banners/battle.png";
-import event2 from "../assets/projects/Graphic Designs/banners/battleforspeed.jpg";
-import event3 from "../assets/projects/Graphic Designs/banners/rookies.png";
-import event4 from "../assets/projects/Graphic Designs/banners/welcome.jpg";
+import participantBadge1 from "../assets/projects/Graphic Designs/Badges/1.png";
+import sticker1 from "../assets/projects/Graphic Designs/Badges/7.png";
+import sticker2 from "../assets/projects/Graphic Designs/Badges/8.png";
+import smartHome from "../assets/projects/Graphic Designs/application/1.png";
+import SajiloAmbulance from "../assets/projects/Graphic Designs/application/3.png";
+import dashain from "../assets/projects/Graphic Designs/festival/Dashain.jpg";
+import shivaratri from "../assets/projects/Graphic Designs/festival/MahaShivaRatri.png";
+import newyear from "../assets/projects/Graphic Designs/festival/Newyear.jpg";
+import tihar from "../assets/projects/Graphic Designs/festival/tihar.jpg";
+import projectDemo from "../assets/projects/Graphic Designs/banners/battle.png";
+import battleforspeed from "../assets/projects/Graphic Designs/banners/battleforspeed.jpg";
+import roborookies from "../assets/projects/Graphic Designs/banners/rookies.png";
 
 export const projects = {
   webData: [
@@ -97,7 +90,7 @@ export const projects = {
       live: "",
     },
     {
-      id: 3,
+      id: 4,
       name: "Smart Door Access System",
       des: "Arduino, Flutter",
       image: smartaccesssystem,
@@ -108,27 +101,75 @@ export const projects = {
   graphicData: [
     {
       id: 1,
-      name: "Event Banners",
-      des: "Simple banners for the events",
-      image: [event1, event2, event3, event4],
+      name: "Dashain Banner",
+      des: "Banner Created for Dahain festival",
+      image: dashain,
     },
     {
       id: 2,
-      name: "Festival Banners",
-      des: "Simple banners for the festival wishes",
-      image: [festival2, festival1, festival3, festival4],
+      name: "Tihar Banner",
+      des: "Banner Created for tihar festival",
+      image: tihar,
     },
     {
       id: 3,
-      name: "Badges",
-      des: "Simple Badges",
-      image: [logo1, logo5, logo3,logo7, logo4, logo6, logo2],
+      name: "New Year",
+      des: "Banner Created for new year 2080",
+      image: newyear,
     },
     {
-      id: 3,
-      name: "Application UI",
-      des: "Some of application UI in figma",
-      image: [app1, app2, app3, app4],
+      id: 4,
+      name: "Shivaratri Banner",
+      des: "Banner Created for Maha-ShivaRatri festival",
+      image: shivaratri,
+    },
+    {
+      id: 5,
+      name: "Battle For Speed",
+      des: "Battle For Speed 2022",
+      image: battleforspeed,
+    },
+    {
+      id: 6,
+      name: "Project Demonstration",
+      des: "Banner for project demo 2022",
+      image: projectDemo,
+    },
+    {
+      id: 7,
+      name: "Roborokiees",
+      des: "Banner for roborookie",
+      image: roborookies,
+    },
+    {
+      id: 8,
+      name: "Participation Badge",
+      des: "Badge for participation in roborookie",
+      image: participantBadge1,
+    },
+    {
+      id: 9,
+      name: "Stickers",
+      des: "Sticker for rookies",
+      image: sticker1,
+    },
+    {
+      id: 10,
+      name: "Stickers",
+      des: "Sticker for rookies",
+      image: sticker2,
+    },
+    {
+      id: 11,
+      name: "Sajilo Ambulance Home",
+      des: "Sajilo Ambulance UI",
+      image: SajiloAmbulance,
+    },
+    {
+      id: 12,
+      name: "Smart Home Control",
+      des: "Smart Home UI",
+      image: smartHome,
     },
   ],
 };

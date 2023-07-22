@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { projects } from "../data/data";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { TbWorldCode } from "react-icons/tb";
-import { Slide, Overlay, MenuNav } from "hero-slider";
-import HeroSlider from "hero-slider/dist/HeroSlider";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Slide, Overlay, MenuNav } from "hero-slider";
+// import HeroSlider from "hero-slider/dist/HeroSlider";
 
 function Project() {
   const [option, setOption] = useState("webData");
@@ -193,12 +195,37 @@ function Project() {
           ))}
         </div>
         {/* Graphic Section only */}
-        <div
-          className={
-            option === "graphicData"
-              ? "mt-10 grid sm:grid-col-1 md:grid-cols-2  gap-5"
-              : "hidden"
-          }>
+        <div className={option === "graphicData" ? "" : "hidden"}>
+          <Carousel
+            autoPlay
+            infiniteLoop
+            showArrows={false}
+            autoFocus
+            useKeyboardArrows
+            showIndicators={false}
+            emulateTouch
+            interval={2500}
+            centerMode
+            stopOnHover
+            thumbWidth={100}
+            showThumbs ={true}
+            showStatus={false}>
+            {a.map((item, index) => (
+              <div
+                key={index}
+                className="max-w-[90%] max-h-auto my-[30px] m-auto bg-contain">
+                <img
+                  src={item.image}
+                  className="object-contain max-h-[50vh] m-auto"
+                  alt="Graphic Images"
+                />
+                <p className="legend">
+                  <p className="text-2xl text-[#1D94D4]">{item.name}</p>
+                  <p className="text-xm text-blue-100">{item.des}</p>
+                </p>
+              </div>
+            ))}
+          </Carousel>
           {/* Simple Slider */}
           {/* {a.map((item, index) => {
               const images = [];
@@ -227,7 +254,7 @@ function Project() {
           })} */}
 
           {/* Hero Slider */}
-          {a.map((item, index) => {
+          {/* {a.map((item, index) => {
             const images = [];
             for (let i = 0; i < item.image.length; i++) {
               images.push(
@@ -236,7 +263,7 @@ function Project() {
                   background={{
                     backgroundImageSrc: item.image[i],
                     backgroundImageClassName:
-                      "object-contain h-auto max-w-full mx-auto ",
+                      "object-contain h-auto max",
                   }}
                 />
               );
@@ -270,8 +297,6 @@ function Project() {
 
               // Hero Slider
               <HeroSlider
-                className="flex justify-center items-center"
-                height={"60vh"}
                 settings={{}}
                 controller={{
                   initialSlide: 1,
@@ -296,7 +321,7 @@ function Project() {
                 <MenuNav />
               </HeroSlider>
             );
-          })}
+          })} */}
           {/* end */}
         </div>
       </div>
