@@ -6,10 +6,10 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
-
 import { BsPersonLinesFill } from "react-icons/bs";
-
-function NavBar({nav, handelClick}) {
+import resume from "../assets/resume.pdf"
+import { Link } from "react-scroll";
+function NavBar({ nav, handelClick }) {
   // const [nav, setNav] = useState(false);
   // const handelClick = () => {
   //   setNav(!nav);
@@ -19,23 +19,49 @@ function NavBar({nav, handelClick}) {
     <div className="fixed w-full h-[85px] flex justify-between items-center px-4 bg-[#1E1E1E] text-[#f4f4f4] z-1">
       <div>
         <span>
-          <img
-            className="hover:animate-[pulse_2s_ease-in-out_infinite]  cursor-pointer"
-            src="./assets/logo.png"
-            alt="Logo"
-            style={{ width: "60px", zIndex: "12", position: "relative" }}
-          />
+          <Link to="home" smooth={true} duration={500}>
+            <img
+              className="hover:animate-[pulse_2s_ease-in-out_infinite]  cursor-pointer"
+              src="./assets/logo.png"
+              alt="Logo"
+              style={{ width: "60px", zIndex: "12", position: "relative" }}
+            />
+          </Link>
         </span>
       </div>
       {/* Menu */}
 
       <ul className="hidden md:flex">
-        <li className="sm:px-4 md:px-6">Home</li>
-        <li className="sm:px-4 md:px-6">About</li>
-        <li className="sm:px-4 md:px-6">My Skills</li>
-        <li className="sm:px-4 md:px-6">Projects</li>
-        <li className="sm:px-4 md:px-6">Blogs</li>
-        <li className="sm:px-4 md:px-6">Contact</li>
+        <li className="sm:px-4 md:px-6">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className="sm:px-4 md:px-6">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} to="about" smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li className="sm:px-4 md:px-6">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} to="skills" smooth={true} duration={500}>
+            My Skills
+          </Link>
+        </li>
+        <li className="sm:px-4 md:px-6">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} isDynamic to="projects" offset={50} smooth={true} duration={500}>
+            Project
+          </Link>
+        </li>
+        <li className="sm:px-4 md:px-6">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} to="blogs" smooth={true} duration={500}>
+            Blogs
+          </Link>
+        </li>
+        <li className="sm:px-4 md:px-6">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} to="contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* Hamburger */}
@@ -51,16 +77,45 @@ function NavBar({nav, handelClick}) {
             ? "hidden"
             : "absolute top-0 left-0 w-full h-screen bg-[#1E1E1E] flex flex-col justify-center items-center z-5"
         }>
-        <li className="py-6 text-4xl">Home</li>
-        <li className="py-6 text-4xl">About</li>
-        <li className="py-6 text-4xl">My Skills</li>
-        <li className="py-6 text-4xl">Projects</li>
-        <li className="py-6 text-4xl">Blogs</li>
-        <li className="py-6 text-4xl">Contact</li>
+        <li className="py-6 text-4xl">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} onClick={handelClick} to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} onClick={handelClick} to="about" smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} onClick={handelClick} to="skills" smooth={true} duration={500}>
+            My Skills
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} onClick={handelClick} isDynamic to="projects" offset={50} smooth={true} duration={500}>
+            Project
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} onClick={handelClick} to="blogs" smooth={true} duration={500}>
+            Blogs
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link activeClass="active" activeStyle={{color:"#1D94D4"}} onClick={handelClick} to="contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* Social Icons */}
-      <div className={!nav?"hidden md:flex fixed flex-col top-[35%] left-0": "flex fixed flex-col top-[35%] left-0"}>
+      <div
+        className={
+          !nav
+            ? "hidden md:flex fixed flex-col top-[35%] left-0"
+            : "flex fixed flex-col top-[35%] left-0"
+        }>
         <ul>
           <li className="w-[150px] h-[50px] flex justify-between items- ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0072b1]">
             <a
@@ -95,8 +150,8 @@ function NavBar({nav, handelClick}) {
           <li className="w-[150px] h-[50px] flex justify-between items- ml-[-100px] hover:ml-[-10px] duration-300 bg-[#b99566]">
             <a
               className="flex justify-between items-center w-full text-[#f3f3f3]"
-              href="/"
-              target="_blank"
+              href={resume}
+              download="resume"
               rel="noreferrer">
               Resume
               <BsPersonLinesFill size={25} />
@@ -109,4 +164,3 @@ function NavBar({nav, handelClick}) {
 }
 
 export default NavBar;
-

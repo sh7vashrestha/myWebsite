@@ -6,6 +6,7 @@ import Skill from "./Components/Skill";
 import Project from "./Components/Project";
 import Blog from "./Components/Blog";
 import { useState } from "react";
+import Contact from "./Components/Contact";
 
 function App() {
   const [nav, setNav] = useState(false);
@@ -20,6 +21,7 @@ function App() {
       <Skill />
       <Project nav = {nav}/>
       < Blog />
+      <Contact />
     </div>
   );
 }
