@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { Slide, Overlay, MenuNav } from "hero-slider";
 // import HeroSlider from "hero-slider/dist/HeroSlider";
 
-function Project() {
+function Project({nav}) {
   const [option, setOption] = useState("webData");
   const handelOnClick = (e) => {
     setOption(e.target.value);
@@ -25,11 +25,12 @@ function Project() {
     <div
       name="projects"
       className="w-full min-h-[100vh] text-[#f3f3f3] bg-[#1e1e1e]">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full ">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full bg-[#1e1e1e]">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-[#1D94D4] border-[#1D94D4]">
             Projects
           </p>
+          <p className="py-4">The following are some of the works that I am involved in.</p>
         </div>
         <div
           className="inline-flex rounded-md shadow-sm max-w-[80%] mx-auto"
@@ -195,7 +196,7 @@ function Project() {
           ))}
         </div>
         {/* Graphic Section only */}
-        <div className={option === "graphicData" ? "" : "hidden"}>
+        <div className={option === "graphicData" && !nav ? "" : "hidden"}>
           <Carousel
             autoPlay
             infiniteLoop
@@ -213,15 +214,15 @@ function Project() {
             {a.map((item, index) => (
               <div
                 key={index}
-                className="max-w-[90%] max-h-auto my-[30px] m-auto bg-contain">
+                className="max-w-[90%] max-h-auto my-[30px] m-auto bg-contain z-0">
                 <img
                   src={item.image}
-                  className="object-contain max-h-[50vh] m-auto"
+                  className="object-contain relative max-h-[50vh] m-auto z-0"
                   alt="Graphic Images"
                 />
-                <p className="legend">
-                  <p className="text-2xl text-[#1D94D4]">{item.name}</p>
-                  <p className="text-xm text-blue-100">{item.des}</p>
+                <p className="legend z-0">
+                  <p className="text-2xl z-0 text-[#1D94D4]">{item.name}</p>
+                  <p className="text-xm z-0 text-blue-100">{item.des}</p>
                 </p>
               </div>
             ))}

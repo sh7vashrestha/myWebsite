@@ -173,3 +173,38 @@ export const projects = {
     },
   ],
 };
+
+export const blogData = [
+  {
+    id: 1,
+    title: "Apple: The Trendsetter.",
+    description:
+      "How Apple is setting the path and other companies are following Apple's footsteps",
+    link: "https://forefronttechno.wordpress.com/2020/07/02/apple-the-trend-setter/",
+  },
+  {
+    id: 2,
+    title:
+      "Google Pixel: State of the art software meets the mediocre hardware.",
+    description: "Google's problem of odinary hardware combined with extraodinary software.",
+    link: "https://forefronttechno.wordpress.com/2020/07/01/google-pixel-state-of-the-art-software-meets-the-mediocre-hardware/",
+  },
+  {
+    id: 3,
+    title: "Tesla: Future of world’s Transportation?",
+    description: "Rise of tesla and its impact in the world and its economy.",
+    link: "https://forefronttechno.wordpress.com/2020/05/11/tesla-future-of-worlds-transportation/",
+  },
+  {
+    id: 4,
+    title: "Rise of Zoom",
+    description: "Rise of Zoom and its impact during COVID times.",
+    link: "https://forefronttechno.wordpress.com/2020/05/10/rise-of-zoom/",
+  },
+  {
+    id: 5,
+    title: "Future of smartphone",
+    description: "Characteristics of smartphones that will be developed in future.",
+    link: "https://forefronttechno.wordpress.com/2020/05/10/future-of-smartphones/",
+  },
+]

@@ -4,15 +4,22 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Skill from "./Components/Skill";
 import Project from "./Components/Project";
+import Blog from "./Components/Blog";
+import { useState } from "react";
 
 function App() {
+  const [nav, setNav] = useState(false);
+  const handelClick = () => {
+    setNav(!nav);
+  };
   return (
     <div className="App">
-      <NavBar />
+      <NavBar nav ={nav} handelClick ={handelClick} />
       <Home />
       <About />
       <Skill />
-      <Project />
+      <Project nav = {nav}/>
+      < Blog />
     </div>
   );
 }

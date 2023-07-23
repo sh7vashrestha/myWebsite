@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FaBars,
   FaTimes,
@@ -9,11 +9,11 @@ import {
 
 import { BsPersonLinesFill } from "react-icons/bs";
 
-function NavBar() {
-  const [nav, setNav] = useState(false);
-  const handelClick = () => {
-    setNav(!nav);
-  };
+function NavBar({nav, handelClick}) {
+  // const [nav, setNav] = useState(false);
+  // const handelClick = () => {
+  //   setNav(!nav);
+  // };
 
   return (
     <div className="fixed w-full h-[85px] flex justify-between items-center px-4 bg-[#1E1E1E] text-[#f4f4f4] z-1">
@@ -49,7 +49,7 @@ function NavBar() {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#1E1E1E] flex flex-col justify-center items-center"
+            : "absolute top-0 left-0 w-full h-screen bg-[#1E1E1E] flex flex-col justify-center items-center z-5"
         }>
         <li className="py-6 text-4xl">Home</li>
         <li className="py-6 text-4xl">About</li>
@@ -109,3 +109,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
